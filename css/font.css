@@ -1,0 +1,16 @@
+:root {
+    --biru: rgb(17, 6, 121);
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--biru);
+}
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--biru);
+}
