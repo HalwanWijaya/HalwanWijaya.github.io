@@ -17,7 +17,7 @@ main {
     width: 100%;
     margin-top: -90px;
     margin-bottom: 5rem;
-    padding: 8rem 20rem;
+    padding: 8rem 0rem;
     z-index: 10;
     border-radius: 100px 100px 50px 50px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.219);
@@ -28,6 +28,11 @@ main {
     -o-border-radius: 100px 100px 50px 50px;
 }
 
+
+main form {
+    max-width: 600px;
+    margin: auto;
+}
 
 main form .pemesanan>div {
     margin-bottom: 40px;
@@ -133,10 +138,6 @@ main form .pemesanan .pelayanan>label>input:checked ~ .checkmark {
 
 
 
-
-
-
-
 main form .tombol {
     position: absolute;
     bottom: 0;
@@ -182,3 +183,21 @@ main form .tombol .batal {
 main form .tombol .review {
     background-color: gold;
 }
+
+
+
+/* RESPONSIF */
+@media screen and (max-width: 959px) {
+    main form {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    main {
+        padding-top: 4rem;
+        border-radius: 50px;
+}
+}
+@media screen and (max-width: 479px) {}
+@media screen and (max-width: 350px) {}

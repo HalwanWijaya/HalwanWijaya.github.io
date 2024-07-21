@@ -37,3 +37,12 @@ footer .copyright {
     background-color: black;
     color: white;
 }
+
+
+
+
+@media screen and (max-width: 639px) {
+    footer .nav {
+        width: 80%;
+    }
+}

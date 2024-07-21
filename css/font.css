@@ -14,3 +14,17 @@ h2 {
     text-align: center;
     color: var(--biru);
 }
+
+
+
+@media screen and (max-width: 1279px) {}
+@media screen and (max-width: 1023px) {}
+@media screen and (max-width: 959px) {}
+@media screen and (max-width: 720px) {}
+@media screen and (max-width: 639px) {
+    h2 {font-size: 28px}
+}
+@media screen and (max-width: 479px) {
+    h2 {font-size: 20px}
+}
+@media screen and (max-width: 350px) {}

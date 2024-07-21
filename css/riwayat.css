@@ -1,0 +1,141 @@
+header {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/background/bg-2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+header h1 {
+    color: white;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    margin-top: -90px;
+    margin-bottom: 5rem;
+    padding: 6rem 0rem;
+    z-index: 10;
+    border-radius: 100px 100px 50px 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.219);
+    background-color: white;
+    -webkit-border-radius: 100px 100px 50px 50px;
+    -moz-border-radius: 100px 100px 50px 50px;
+    -ms-border-radius: 100px 100px 50px 50px;
+    -o-border-radius: 100px 100px 50px 50px;
+}
+
+
+main .container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+main .container>div {
+    display: flex;
+    position: relative;
+    padding: 15px 30px;
+    border-radius: 8px;
+}
+
+main .head {
+    background-color: rgb(179, 210, 223);
+    color: rgb(77, 101, 110);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+main .body {
+    background-color: rgb(228, 231, 233);
+    color: rgb(41, 53, 58);
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+main .body .informasi {
+    display: flex;
+}
+main .body .tombol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    margin-top: 15px;
+    border-top: 2px dashed rgb(177, 198, 255);
+}
+main .body .tombol .grup {
+    position: absolute;
+    right: 30px;
+}
+.tombol button {
+    font-weight: bold;
+    color: white;
+    letter-spacing: .8px;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+.tombol .bayar { background-color: rgb(0, 216, 18) }
+.tombol .edit { background-color: rgb(224, 209, 0) }
+.tombol .delete { background-color: rgb(209, 42, 23) }
+
+.tombol .bayar.lunas {
+    background-color: white;
+    color: rgb(0, 216, 18);
+    border: 2px solid rgb(0, 216, 18);
+}
+
+.no { width: 100px }
+.nama { width: 200px }
+.nomer { width: 180px }
+.tanggal { width: 200px }
+
+.harga {
+    position: absolute;
+    right: 30px;
+    text-align: right;
+}
+.no, .harga {
+    font-weight: bold;
+}
+
+
+/* RESPONSIF */
+@media screen and (max-width: 1279px) {
+    main .container {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 1023px) {}
+
+@media screen and (max-width: 959px) {
+    main {
+        padding: 4rem 0;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+}
+
+    .no { width: 50px }
+    .nama { width: 100px }
+    .nomer { width: 130px }
+}
+
+@media screen and (max-width: 639px) {
+    .tanggal { display: none; }
+    
+    main .body .tombol .grup { position: static }
+    main .body .tombol { 
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    main .body .tombol * { margin: 2px auto; }
+}
+@media screen and (max-width: 479px) {
+    .nomer { display: none }
+}
+@media screen and (max-width: 350px) {}
