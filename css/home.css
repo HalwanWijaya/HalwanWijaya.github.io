@@ -1,0 +1,353 @@
+body,
+html {
+	overflow-x: hidden;
+}
+body {
+    overflow-y: hidden;
+}
+
+/* AWAL HEADER */
+header {
+	width: 100vw;
+	height: 101vh;
+	user-select: none;
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+	box-shadow: inset 0 -4px 40px black;
+}
+
+/* SLIDESHOW BACKGROUND HEADER */
+.sr-only {
+	position: absolute;
+	pointer-events: none;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	color: transparent;
+}
+input {
+	position: absolute;
+	opacity: 0;
+	margin-top: 90vh;
+	cursor: pointer;
+	/* translate: 0 -100px; */
+}
+label {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border: solid 2px white;
+	border-radius: 999px;
+	background-color: transparent;
+	margin: 90vh 6px 0 6px;
+	z-index: 2;
+	cursor: pointer;
+	transition-duration: 0.4s;
+	box-shadow: 0 0 20px 0 #000;
+}
+label.mode1 {
+	translate: 0 -60px;
+}
+input:checked + label {
+	background-color: rgba(255, 255, 255, 1);
+}
+input + label::after {
+	content: "";
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512' width='100' style='fill:white'%3E%3Cpath d='M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z' /%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: center 55%;
+	background-size: 80px 80px;
+	line-height: 100vh;
+	transition: background-size 200ms;
+	position: absolute;
+	color: rgb(0, 0, 0);
+	height: calc(95vh - 12px);
+	width: 80px;
+	top: 0;
+	left: 0;
+	z-index: 20;
+	opacity: 0.3;
+}
+input + label:hover::after {
+	background-size: 90px 90px;
+}
+input:checked + label::after {
+	background-image: none;
+	width: 100vw;
+	left: 0;
+	z-index: 10;
+}
+input:checked + label + .slide ~ input + label::after {
+	display: none;
+}
+input:checked + label + .slide + input + label::after {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512' width='100' fill='white'%3E%3Cpath d='M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z' /%3E%3C/svg%3E");
+	display: block;
+	width: 80px;
+	right: 10px;
+	left: auto;
+}
+input:focus + label {
+	box-shadow: 0 0 0 2px teal, 0 0 18px white;
+}
+.slide {
+	position: absolute;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	transform: translateX(-100%);
+	transition-duration: 0.4s;
+	opacity: 1;
+}
+input:checked ~ .slide {
+	transform: translateX(100%);
+}
+input:checked + label + .slide {
+	transform: translateX(0);
+	opacity: 1;
+}
+
+.bg1 {
+	background-image: url(../img/background/bg-5.jpg);
+	background-size: cover;
+}
+.bg2 {
+	background-image: url(../img/background/bg-4.jpg);
+	background-size: cover;
+}
+.bg3 {
+	background-image: url(../img/background/bg-3.jpg);
+	background-size: cover;
+	background-position: 0 0;
+}
+/* AKHIR SLIDESHOW BACKGROUND HEADER */
+
+
+header .judul {
+	position: absolute;
+	right: 0;
+	left: 0;
+	top: 80px;
+	margin-top: 5rem;
+}
+header .judul h1 {
+	font-size: 48px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 10px black, 0 0 20px rgba(1, 255, 149, 0.61);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+header .judul p {
+    margin-top: 1rem;
+    color: white;
+    font-size: 20px;
+    text-shadow: 0 0 10px black, 2px 0 0 black;
+    /* word-spacing: 10px; */
+    letter-spacing: 1px;
+}
+/* AKHIR HEADER */
+
+
+
+
+/* AWAL MAIN */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 90px;
+}
+main article {
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.219);
+    width: 90%;
+    padding: 50px 0;
+}
+main article h2 {
+    text-decoration: underline;
+    text-underline-offset: 15px;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 4px;
+}
+main article .container {
+    margin: auto;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+}
+main article.tempat-wisata, article.tempat-penginapan {
+    margin-bottom: 5rem;
+}
+
+
+main .tempat-wisata .container .tempat,
+main .tempat-penginapan .container .tempat {
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 30%;
+    height: 300px;
+    margin: 15px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    transition: .5s;
+}
+main .tempat-penginapan .container .tempat {
+    height: 400px;
+}
+main .tempat-wisata .container .tempat:hover,
+main .tempat-penginapan .container .tempat:hover {
+    background-color: rgb(41, 41, 41);
+    color: white;
+}
+main .tempat-wisata .container .tempat:hover .thumbnail .overlay,
+main .tempat-penginapan .container .tempat:hover .thumbnail .overlay {
+    margin-top: 0%;
+}
+main .tempat-wisata .container .tempat .thumbnail .overlay,
+main .tempat-penginapan .container .tempat .thumbnail .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.596);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    font-size: large;
+    text-transform: capitalize;
+    color: rgb(0, 247, 255);
+    margin-top: 65%;
+    transition: .5s;
+}
+main .tempat-wisata .container .tempat .thumbnail,
+main .tempat-penginapan .container .tempat .thumbnail {
+    width: 100%;
+    height: 50%;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+/* THUMBNAIL TEMPAT WISATA */
+main .tempat-wisata .container .tempat.satu .thumbnail {
+    background-image: url(../img/tempat-wisata/transera-park.jpg);
+}
+main .tempat-wisata .container .tempat.dua .thumbnail {
+    background-image: url(../img/tempat-wisata/rainbow-garden.jpg);
+}
+main .tempat-wisata .container .tempat.tiga .thumbnail {
+    background-image: url(../img/tempat-wisata/snow-world-bekasi.jpg);
+}
+main .tempat-wisata .container .tempat.empat .thumbnail {
+    background-image: url(../img/tempat-wisata/columbus-waterpark.jfif);
+}
+main .tempat-wisata .container .tempat.lima .thumbnail {
+    background-image: url(../img/tempat-wisata/sirkus-waterplay.jfif);
+}
+main .tempat-wisata .container .tempat.enam .thumbnail {
+    background-image: url(../img/tempat-wisata/snow-world-revo.png);
+}
+
+
+/* THUMBNAIL TEMPAT PENGINAPAN */
+main .tempat-penginapan .container .tempat.satu .thumbnail {
+    background-image: url(../img/tempat-penginapan/hotel-santika.jpg);
+}
+main .tempat-penginapan .container .tempat.dua .thumbnail {
+    background-image: url(../img/tempat-penginapan/hotel-horison.jpg);
+}
+main .tempat-penginapan .container .tempat.tiga .thumbnail {
+    background-image: url(../img/tempat-penginapan/hotel-aston.png);
+}
+main .tempat-penginapan .container .tempat.empat .thumbnail {
+    background-image: url(../img/tempat-penginapan/hotel-ciputra.jpg);
+}
+main .tempat-penginapan .container .tempat.lima .thumbnail {
+    background-image: url(../img/tempat-penginapan/hotel-avenzel.jpg);
+}
+
+/* DESKRIPSI */
+main .tempat-wisata .container .tempat .deskripsi,
+main .tempat-penginapan .container .tempat .deskripsi {
+    width: 100%;
+    height: 50%;
+    padding: 20px 30px;
+    text-align: center;
+}
+main .tempat-wisata .container .tempat .deskripsi h4,
+main .tempat-penginapan .container .tempat .deskripsi h4 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+main .tempat-penginapan .container .tempat .deskripsi img {
+    width: 80%;
+    margin-top: 30px;
+}
+
+/* KEGIATAN */
+main .kegiatan {
+    margin-bottom: 5rem;
+}
+main .kegiatan .container iframe {
+    width: 30%;
+    height: 200px;
+    margin: 10px;
+    border-radius: 10px;
+}
+/* AKHIR MAIN */
+
+
+
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 1279px) {
+    main .kegiatan .container iframe {
+        width: 40%;
+    }
+}
+@media screen and (max-width: 1110px) {
+    main article[class] .container .tempat {
+        width: 40%;
+    }
+}
+@media screen and (max-width: 1023px) {}
+@media screen and (max-width: 959px) {
+    header .judul {
+        width: 80%;
+        margin: 5rem auto 0;
+    }
+    main .kegiatan .container iframe {
+        width: 80%;
+        height: 35vw;
+    }
+}
+@media screen and (max-width: 920px) {
+    main article[class] .container .tempat {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    header .judul h1 {font-size: 38px}
+}
+@media screen and (max-width: 639px) {
+    header .judul p {font-size: 18px}
+}
+@media screen and (max-width: 479px) {
+    main article[class] .container .tempat .thumbnail .overlay {
+        margin-top: 150%;
+    }
+}
+@media screen and (max-width: 350px) {}

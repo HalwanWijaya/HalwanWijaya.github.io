@@ -1,0 +1,205 @@
+header {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/background/bg-2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+header h1 {
+    color: white;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    margin-top: -90px;
+    margin-bottom: 5rem;
+    padding: 8rem 0rem;
+    z-index: 10;
+    border-radius: 100px 100px 50px 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.219);
+    background-color: white;
+    -webkit-border-radius: 100px 100px 50px 50px;
+    -moz-border-radius: 100px 100px 50px 50px;
+    -ms-border-radius: 100px 100px 50px 50px;
+    -o-border-radius: 100px 100px 50px 50px;
+}
+
+
+main form {
+    max-width: 600px;
+    margin: auto;
+}
+
+main form .pemesanan>div {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+}
+main form .pemesanan>div>label {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(0, 0, 80);
+}
+main form .pemesanan>div>input {
+    font-size: 18px;
+    margin-top: 15px;
+    padding: 10px 20px;
+
+    box-shadow: 0 0 5px var(--biru);
+    border: none;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+main form .pemesanan>div>input::placeholder {
+    /* font-weight: bold; */
+    font-style: italic;
+    color: var(--biru);
+    opacity: .5;
+}
+
+
+main form .pemesanan .pelayanan>label:first-child {
+    margin-bottom: 15px;
+}
+main form .pemesanan .pelayanan>label[class] {
+    position: relative;
+    padding: 10px 20px;
+    box-shadow: 0 0 5px var(--biru);
+    border-radius: 7px;
+    margin: 6px 0;
+    font-size: 18px;
+    cursor: pointer;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+main form .pemesanan .pelayanan>label>label {
+    font-weight: bold;
+    color: var(--biru);
+    opacity: .5;
+    letter-spacing: 1px;
+    margin-left: 30px;
+}
+main form .pemesanan .pelayanan>label>input {
+    position: absolute;
+    height: 0;
+    width: 0;
+}
+main form .pemesanan .pelayanan>label>.checkmark {
+    position: absolute;
+    left: 15px;
+    top: 8px;
+    height: 20px;
+    width: 20px;
+    background-color: rgba(0, 0, 255, 0.1);
+    border: 1px solid rgba(0, 0, 255, 0.7);
+    border-radius: 5px;
+}
+
+main form .pemesanan .pelayanan>label>input:checked ~ .checkmark {
+    background-color: rgba(0, 0, 255, 0.4);
+}
+
+.pelayanan>label> .checkmark:after {
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.pelayanan>label>input:checked ~ .checkmark:after {
+    display: block;
+}
+
+
+#tanggal {
+    font-style: italic;
+    font-family: 'Rubic',sans-serif;
+    color: rgba(0, 0, 90, 0.5);
+}
+
+
+
+
+main form .tombol {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    user-select: none;
+}
+
+main form .tombol .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main form .tombol .container .atas {
+    margin-bottom: 10px;
+}
+main form .tombol .container .atas button {
+    margin: 0 5px;
+}
+
+main form .tombol button, .tombol .review {
+    cursor: pointer;
+    padding: 5px 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+main form .tombol .pesan {
+    background-color: greenyellow;
+}
+main form .tombol .batal {
+    background-color: salmon;
+}
+main form .tombol .review {
+    background-color: gold;
+}
+
+
+
+/* RESPONSIF */
+@media screen and (max-width: 959px) {
+    main form {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    main {
+        padding-top: 4rem;
+        border-radius: 50px;
+}
+}
+@media screen and (max-width: 479px) {}
+@media screen and (max-width: 350px) {}

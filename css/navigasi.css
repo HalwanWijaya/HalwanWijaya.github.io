@@ -1,0 +1,109 @@
+.navigasi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    /* background-color: whitesmoke; */
+    background-color: white;
+    box-shadow: 0px 0 40px black;
+    transition: 1s;
+    transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+.navigasi.mode1 {
+    bottom: -50px;
+    width: 40%;
+    margin: auto;
+    position: absolute;
+    box-shadow: 0px 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+.navigasi.mode2 {
+    position: fixed;
+    top: 0;
+    bottom: unset;
+    box-shadow: 0px 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+.navigasi .menu {
+    display: flex;
+    /* outline: auto; */
+}
+
+.navigasi .menu a {
+    /*outline: auto;*/
+    margin: 5px 40px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--biru);
+}
+.navigasi .menu a:hover p{
+    color: white;
+    text-shadow: 1px 0 0 var(--biru), -1px 0 0 var(--biru), 0 1px 0 var(--biru), 0 -1px 0 var(--biru);
+}
+.navigasi .menu a:hover img {
+    translate: 0 -5px;
+}
+
+.navigasi .menu a p {
+    margin-top: 5px;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+}
+
+.navigasi img {
+    height: 50px;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+}
+
+.navigasi.mode2 img {
+    height: 40px;
+}
+.navigasi.mode2 p {
+    display: none;
+}
+
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 1279px) {}
+@media screen and (max-width: 1023px) {}
+@media screen and (max-width: 959px) {
+    .navigasi.mode1 {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 639px) {
+    .navigasi .menu a {
+        margin: 5px 20px;
+    }
+}
+@media screen and (max-width: 479px) {}
+@media screen and (max-width: 350px) {
+    .navigasi.mode1 {
+        width: 100%;
+    }
+
+}
