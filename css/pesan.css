@@ -146,6 +146,7 @@ main form .tombol {
     padding-bottom: 50px;
     display: flex;
     justify-content: center;
+    user-select: none;
 }
 
 main form .tombol .container {
@@ -161,7 +162,8 @@ main form .tombol .container .atas button {
     margin: 0 5px;
 }
 
-main form .tombol button {
+main form .tombol button, .tombol .review {
+    cursor: pointer;
     padding: 5px 15px;
     color: white;
     font-weight: bold;
